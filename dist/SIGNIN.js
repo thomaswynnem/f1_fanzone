@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
+import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,6 +20,7 @@ const firebaseConfig = {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
+  const db = getFirestore(app);
 
   const submit = document.querySelector(".submit");
 
@@ -29,6 +33,9 @@ const firebaseConfig = {
         .then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
+            const uid = user.uid;
+            window.currentUserUID = uid;
+            localStorage.setItem("uid", uid);
             window.location.href = "index.html";
             // ...
         })
@@ -37,5 +44,7 @@ const firebaseConfig = {
             const errorMessage = error.message;
             // ..
         });
+
+    
 
   })
