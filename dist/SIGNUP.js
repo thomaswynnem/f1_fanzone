@@ -39,7 +39,7 @@ const firebaseConfig = {
             const uid = user.uid;
             const parsedName = user.email.split('@')[0];
 
-            const userRef = doc(db, 'users', uid);  // UID is used as document ID
+            const userRef = doc(db, 'f1-assignment', uid);  // UID is used as document ID
 
             const docSnap = await getDoc(userRef);
 
@@ -50,6 +50,7 @@ const firebaseConfig = {
                 Racers: []
               });
             }
+            window.location.href = "index.html";
           })
           .catch((error) => {
             console.error("Error signing up:", error);
