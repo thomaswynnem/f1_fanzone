@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .container img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .submit {
+      background-color: #4facfe;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .submit:hover {
+      background-color: #00c3ff;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    .go-to-signin {
+      color: #00aaff;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://cdn-icons-png.flaticon.com/512/295/295128.png" alt="User Icon" />
+    <h1>Create Account</h1>
+    <form>
+      <input type="email" class="email" placeholder="Email" required /><br>
+      <input type="password" class="password" placeholder="Password" required /><br>
+      <button class="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <span class="go-to-signin">Sign In</span></p>
+  </div>
+
+  <script type="module" src="SIGNUP.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Fan Cave</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Site Title -->
+        <h1 class="title">F1 Fan Cave</h1>
+
+        <!-- Search Area -->
+        <div class="search-bar" id="searchBar">
+            <input type="text" class="search-input" id="driverSearchInput" name="driver-search" placeholder="Search your favourite driver…" />
+            <button type="button" class="search-button" id="addDriverButton">Add Driver</button>
+        </div>
+
+        <!-- Dynamic Driver Cards Grid -->
+        <section class="drivers-grid" id="driversGrid">
+            <!-- Driver cards will be injected here by JS -->
+        </section>
+    </div>
+
+    <script src="APP.bundle.js"></script>
+    <script src="UI.bundle.js"></script>
+    <script src="USER_BACKEND.bundle.js"></script>
+    <script src="API.bundle.js"></script>
+</body>
+</html>
