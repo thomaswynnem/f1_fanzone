@@ -22,6 +22,7 @@ const firebaseConfig = {
   const auth = getAuth(app);
   const db = getFirestore(app);
 
+
   const submit = document.querySelector(".submit");
 
   submit.addEventListener("click", (e) => {
